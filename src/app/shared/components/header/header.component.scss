@@ -1,7 +1,7 @@
 .header-wrapper {
     width: 100vw;
     height: 3rem;
-    background-color: rgb(153, 12, 12);
+    background-color: black;
 }
 
 .menu-icon-wrapper {
@@ -10,5 +10,9 @@
     padding: 0 1rem;
     img {
         cursor: pointer;
+        background: white;
+        padding: 0.5rem;
+        margin-top: 0.75rem;
+        border-radius: 50%;
     }
 }

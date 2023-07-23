@@ -16,7 +16,6 @@
 }
 
 .content {
-    margin: 0 0 1rem;
     color: white;
 }
 
@@ -31,6 +30,7 @@
 .description {
     font-size: 1.25rem;
     text-align: justify;
+    margin: 1.5rem 0;
     @media only screen and (max-width: 600px) {
         font-size: 1rem;
     }
@@ -41,7 +41,7 @@
 }
 
 .rating-icon {
-    height: 2rem;
+    height: 1.25rem;
     @media only screen and (max-width: 600px) {
         height: 1rem;
     }
@@ -53,17 +53,18 @@
 
 .half-star {
     vertical-align: text-bottom;
-    height: 2.35rem !important;
+    height: 1.5rem !important;
+    margin-bottom: 0.1rem;
     @media only screen and (max-width: 600px) {
-        height: 1.25rem !important;
+        height: 1.2rem !important;
     }
 }
 
 .score {
-    font-size: 2rem;
-    margin: 0 1rem;
+    font-size: 1.25rem;
+    margin: 0 0.5rem;
     color: white;    
     @media only screen and (max-width: 600px) {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 }

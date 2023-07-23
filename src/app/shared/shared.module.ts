@@ -5,6 +5,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { ErrorComponent } from './components/error/error.component';
+import { PipesModule } from './pipes/pipes.module';
 
 
 
@@ -23,7 +24,8 @@ import { ErrorComponent } from './components/error/error.component';
     SidebarComponent,
     HeaderComponent,
     LoaderComponent,
-    ErrorComponent
+    ErrorComponent,
+    PipesModule
   ]
 })
 export class SharedModule { }

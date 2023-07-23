@@ -35,10 +35,8 @@ export class MoviesListComponent implements OnInit {
       this.moviesList = this.popular.concat(this.recommended);
       this.slides = this.moviesList;
       this.startSlideshow();
-      console.log(this.moviesList, this.slides);
       this.isLoading = false;
     }), (error) => {
-      console.log(error);
       this.isLoading = false;
       this.isError = true; 
     }
@@ -46,7 +44,6 @@ export class MoviesListComponent implements OnInit {
 
   addSectionData(name, data) {
     this.sections.push({title: name, items: data});
-    console.log(this.sections);    
   }
 
   startSlideshow() {

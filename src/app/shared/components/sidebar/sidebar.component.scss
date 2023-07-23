@@ -1,0 +1,114 @@
+.sidebar-wrapper {
+    width: 5rem;
+    background: rgb(153, 12, 12);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 3;
+    @media only screen and (max-width: 600px) {
+        padding: 1rem;
+        top: 3rem;
+        height: 100vh;
+        box-sizing: border-box;
+        width: 8rem;
+    }
+}
+
+.mob-sidebar-show {
+    @media only screen and (max-width: 600px) {
+        transform: translateX(0rem);
+        transition: transform 0.5s linear;
+    }
+}
+
+.mob-sidebar-hide {
+    @media only screen and (max-width: 600px) {
+        transform: translateX(-8rem);
+        transition: transform 0.5s linear;
+    }
+}
+
+.menu-items-wrapper {
+    height: inherit;
+    gap: 0.5rem;
+    @media only screen and (max-width: 600px) {
+        gap: 0;
+        justify-content: start !important;
+        align-items: start !important;
+        width: inherit;
+    }
+}
+
+.menu-item {
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+        background-color: white;
+    }
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+}
+
+.active {
+    background-color: white;
+}
+
+.icon {
+    position: relative;
+}
+
+.icon-text {
+    display: none;
+}
+
+.icon-img:hover + .icon-text {
+    display: block;
+    position: absolute;
+    background-color: #666666;
+    border-radius: 0.3125rem;
+    padding: 0.3125rem;
+    font-size: 0.75rem;
+    color: #ffffff;
+    top: -1rem;
+    right: -2.5rem;
+}
+
+.mob-menu-item {
+    display: none;
+    @media only screen and (max-width: 600px) {
+        display: block;
+        width: inherit;
+        cursor: pointer;
+        &:hover {
+            background-color: white;
+            margin-left: -1rem;
+            .text {
+                p {
+                    margin-left: 1rem;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.mob-active {
+    @media only screen and (max-width: 600px) {
+        background-color: white;
+        margin-left: -1rem;
+        .text {
+            p {
+                font-weight: 700;
+                margin-left: 1rem;
+                color: black;
+            }
+        }
+    }    
+}
+
+.text {
+    font-size: 1.25rem;
+}

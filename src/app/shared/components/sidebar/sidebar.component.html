@@ -1,0 +1,17 @@
+<div class="sidebar-wrapper" [ngClass]="{'mob-sidebar-show': showSidebar, 'mob-sidebar-hide': !showSidebar}">
+    <div class="flex flex-column flex-center menu-items-wrapper">
+        <ng-container *ngFor="let menuItem of menuItems">
+            <div class="menu-item" (click)="setActive(menuItem)" [ngClass]="{'active' : menuItem.isActive}">
+                <div class="flex flex-center icon">
+                    <img [src]="menuItem.icon" class="icon-img">
+                    <div class="icon-text"> {{menuItem.name}} </div>
+                </div>
+            </div>
+            <div class="mob-menu-item" (click)="setActive(menuItem)" [ngClass]="{'mob-active' : menuItem.isActive}">
+                <div class="text">
+                    <p> {{menuItem.name}} </p>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

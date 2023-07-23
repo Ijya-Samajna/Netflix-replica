@@ -1,0 +1,11 @@
+<div class="main">
+    <div class="header-wrapper">
+        <app-header (toggle)="openSidebar = !openSidebar"></app-header>
+    </div>
+    <div class="flex flex-column">
+        <app-sidebar [expandSidebar] = "openSidebar"></app-sidebar>
+        <div class="routing">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

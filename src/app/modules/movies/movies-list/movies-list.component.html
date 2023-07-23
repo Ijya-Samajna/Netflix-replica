@@ -1,0 +1,31 @@
+<ng-container *ngIf="!isLoading && !isError; else otherTemplates">
+    <div class="page-wrapper">
+        <div class="slider-wrapper flex flex-row">
+            <img src="../../../../assets/icons/forward.svg" class="icon icon-backward" (click)="slide('backward')">
+            <img src={{slides[currentIndex]?.Poster}} class="banner" (click)="goTo(slides[currentIndex])">
+            <div class="banner-info">
+                {{slides[currentIndex]?.Title}}
+            </div>
+            <img src="../../../../assets/icons/forward.svg" class="icon icon-forward" (click)="slide('forward')">
+        </div>
+        <div class="movie-sections flex flex-column">
+            <div *ngFor="let section of sections" class="section">
+                <div class="section-wrapper flex flex-column">
+                    <p class="section-title">{{section.title}}</p>
+                    <div class="section-items-wrapper flex flex-row">
+                        <div *ngFor="let item of section.items" class="section-item" (click)="goTo(item)">
+                            <img src={{item.Poster}} class="poster">
+                            <div class="item-info">
+                                <p>{{item.Title}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-template #otherTemplates>
+    <app-loader *ngIf="isLoading"></app-loader>
+    <app-error *ngIf="isError"></app-error>
+</ng-template>

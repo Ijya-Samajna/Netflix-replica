@@ -1,0 +1,14 @@
+.header-wrapper {
+    width: 100vw;
+    height: 3rem;
+    background-color: rgb(153, 12, 12);
+}
+
+.menu-icon-wrapper {
+    width: max-content;
+    height: inherit;
+    padding: 0 1rem;
+    img {
+        cursor: pointer;
+    }
+}

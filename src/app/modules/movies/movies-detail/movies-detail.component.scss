@@ -1,0 +1,69 @@
+.page-wrapper {
+    padding: 2rem;
+    @media only screen and (max-width: 600px) {
+        padding: 1rem;
+    }
+}
+
+.banner-wrapper {
+    margin: 0 0 2rem;
+}
+
+.banner {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.content {
+    margin: 0 0 1rem;
+    color: white;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;    
+    @media only screen and (max-width: 600px) {
+        font-size: 1.5rem;
+    }
+}
+
+.description {
+    font-size: 1.25rem;
+    text-align: justify;
+    @media only screen and (max-width: 600px) {
+        font-size: 1rem;
+    }
+}
+
+.rating {
+    margin-bottom: 1rem;
+}
+
+.rating-icon {
+    height: 2rem;
+    @media only screen and (max-width: 600px) {
+        height: 1rem;
+    }
+}
+
+.star {
+    margin-right: 0.25rem;
+}
+
+.half-star {
+    vertical-align: text-bottom;
+    height: 2.35rem !important;
+    @media only screen and (max-width: 600px) {
+        height: 1.25rem !important;
+    }
+}
+
+.score {
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: white;    
+    @media only screen and (max-width: 600px) {
+        font-size: 1.25rem;
+    }
+}

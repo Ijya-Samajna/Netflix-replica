@@ -1,0 +1,33 @@
+<ng-container *ngIf="!isLoading && !isError; else otherTemplates">
+    <div class="page-wrapper">
+        <div class="banner-wrapper">
+            <img [src]="movieDetails?.Poster" class="banner">
+        </div>
+        <div class="contents-wrapper">
+            <div class="title content">
+                {{movieDetails.Title}}
+            </div>
+            <div class="description content">
+                {{movieDetails.Plot}}
+            </div>
+            <div class="ratings-wrapper flex flex-row">
+                <div class="rating">
+                    <ng-container *ngFor="let rating of ratings">
+                        <img src="../../../../assets/icons/star.svg" class="rating-icon star">
+                    </ng-container>
+                    <ng-container *ngIf="movieScore%1 != 0">
+                        <img src="../../../../assets/icons/half-star.png" class="rating-icon half-star">
+                    </ng-container>
+                </div>
+                <div class="score">
+                    {{movieDetails.Ratings[0].Value}}
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #otherTemplates>
+    <app-loader *ngIf="isLoading"></app-loader>
+    <app-error *ngIf="isError"></app-error>
+</ng-template>

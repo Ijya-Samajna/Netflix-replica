@@ -1,0 +1,31 @@
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.loader {
+    border: 0.5rem solid rgb(153, 12, 12);
+    border-top: 0.5rem solid black; 
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    animation: spin 2s linear infinite;
+    @media only screen and (max-width: 960px) {
+        border-width: 0.25rem;
+        border-top-width: 0.25rem;
+    }
+    @media only screen and (max-width: 600px) {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0 !important;
+    background-color: black;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-start {
+    justify-content: start;
+    align-items: start;
+}
+
+p, div {
+    font-family: sans-serif;
+}
